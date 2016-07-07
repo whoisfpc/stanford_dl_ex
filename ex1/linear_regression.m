@@ -22,3 +22,6 @@ function [f,g] = linear_regression(theta, X,y)
   %        computed gradient in 'g'.
   
 %%% YOUR CODE HERE %%%
+  z = theta' * X; % 1 X m vector
+  f = 0.5 * ((z-y) * (z-y)');
+  g = X * (z-y)';
