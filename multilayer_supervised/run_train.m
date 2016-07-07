@@ -39,6 +39,7 @@ params = stack2params(stack);
 %% setup minfunc options
 options = [];
 options.display = 'iter';
+%options.MaxIter = 100;
 options.maxFunEvals = 1e6;
 options.Method = 'lbfgs';
 
