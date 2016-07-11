@@ -8,3 +8,6 @@ epsilon = 1e-4;
 % z is the ZCA transformed data. The dimenison of z = x.
 
 %%% YOUR CODE HERE %%%
+sigma = cov(x');
+[U,S,~] = svd(sigma);
+Z = U * diag(1./sqrt(diag(S) + epsilon)) * U' * x;
